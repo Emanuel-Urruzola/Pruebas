@@ -10,20 +10,16 @@ function App() {
   },[])
 
   return (
-    <>
-      <ul>
-        {
-          post &&
-          post.map(({title, body, id})=>{
-            return(
-              <li id={id} key={id}>
-                <h2>{title}</h2>
-                <p>{body}</p>
-              </li>
-          )})
-        }
-      </ul>
-    </>
+    <ul>
+      {
+        post?.map(({ title, body, id }) =>
+          <li id={id} key={id}>
+            <h2>{title}</h2>
+            <p>{body}</p>
+          </li>
+        )
+      }
+    </ul>
   )
 }
 
